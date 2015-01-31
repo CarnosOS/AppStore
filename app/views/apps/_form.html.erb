@@ -1,0 +1,32 @@
+<%= form_for (@app) do |f| %>
+
+ <div class="app-name">
+  <%= f.label :app_name %>
+  <%= f.text_field :app_name %>
+ </div>
+ <div class="banner-url">
+     <%= f.label :banner_url %>
+     <%= f.url_field :banner_url %>
+ </div>
+ <div class="user-count">
+     <%= f.label :user_count %>
+      <%= f.text_field :user_count %>
+ </div>
+ <div class="icon-url">
+       <%= f.label :icon_url %>
+      <%= f.url_field :icon_url %>
+ </div>
+  <div class="description">
+       <%= f.label :description %>
+      <%= f.text_field :description %>
+ </div>
+  <div class="download_link">
+       <%= f.label :download_link %>
+      <%= f.text_field :download_link %>
+ </div>
+  <div class="actions">
+     <%= f.submit %>
+ </div>
+ 
+ <% end %>
+ 

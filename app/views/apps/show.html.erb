@@ -1,0 +1,8 @@
+
+<div class="app-profile">
+    <span class="app-title"><h1><%= @app.app_name %></h1></span>
+     <span class="app-description"><h2><%= @app.description %></h2></span>
+     <%= link_to "Delete",apps_delete_path(:id => @app.id) %>
+<%= link_to "Edit",edit_app_path(@app) %>
+<%= link_to "Back",apps_path %>
+</div>

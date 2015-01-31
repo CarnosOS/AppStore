@@ -1,0 +1,10 @@
+<h1>Delete <%= @app.app_name %> ?</h1>
+<h2> <%= @app.app_name %> </h2>
+<h2> <%= @app.description %> </h2>
+<h2> <%= @app.user_count %> </h2>
+<h2> <%= @app.download_link %> </h2>
+
+
+<%= link_to "Delete",apps_delete_path(:id => @app.id) %>
+<%= link_to "Edit",edit_app_path(@app) %>
+<%= link_to "Back",apps_path %>
