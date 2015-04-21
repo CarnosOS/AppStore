@@ -11,20 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125144326) do
+ActiveRecord::Schema.define(version: 20150202183719) do
 
   create_table "apps", force: true do |t|
     t.string   "app_name"
     t.string   "banner_url"
     t.integer  "user_count"
     t.string   "icon_url"
-    t.string   "description"
+    t.text     "description"
     t.string   "download_link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "platforms", force: true do |t|
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.integer  "apps_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

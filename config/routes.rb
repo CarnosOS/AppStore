@@ -1,17 +1,21 @@
 Rails.application.routes.draw do
     
- root 'platform#index'
- resources :platform
+  get 'categories/index'
+
+  get 'categories/show'
+
+  get 'categories/new'
+
+  get 'categories/edit'
+
+  get 'categories/delete'
+
+ root 'categories#index'
  
-  get 'platform/index' => 'platform#index'
+ resources :categories
+ 
 
-  get 'platform/:id/' => 'platform#show'
 
-  get 'platform/new' => 'platform#new'
-
-  get 'platform/:id/edit' => 'platform#edit'
-
-  get 'platform/:id/delete' => 'platform#delete'
 
   resources :apps
   
@@ -23,7 +27,7 @@ Rails.application.routes.draw do
     
      get 'apps/new' => 'apps#new', :as => :apps_new
   
-    get 'apps/:id/edit' => 'apps#edit' 
+    get 'apps/:id/edit' => 'apps#edit' , :as => :apps_edit
  
   
      
