@@ -1,0 +1,23 @@
+<%= form_for (@appsidy) do |f| %>
+
+ <div class="appsidy_name">
+  <%= f.label :appsidy_name %>
+  <%= f.text_field :appsidy_name %>
+ </div>
+
+
+
+  <div class="description">
+       <%= f.label :appsidy_description %>
+      <%= f.text_field :appsidy_description %>
+ </div>
+    
+ <div class="appsidy_url">
+     <%= f.label :appsidy_url %>
+     <%= f.text_field  :appsidy_url %>
+ </div>
+  <div class="actions">
+     <%= f.submit %>
+ </div>
+ 
+ <% end %>

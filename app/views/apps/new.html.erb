@@ -1,2 +1,8 @@
 <h1> New App</h1>
+<% if user_signed_in? %>
 <%= render 'form' %>
+<% else %>
+
+              <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-default" %>
+              <%= link_to "Sign in", new_user_session_path, :class => "btn btn-default" %>
+<% end %>

@@ -1,5 +1,14 @@
- <div class="product-grid">
-     <%  @apps.each do |app| %>
+<html>
+    <head>
+        <title>Apps</title>
+    </head>
+<body>
+<div class="container">
+    <%= render 'navbar'%>
+    
+    <div class="product-grid">
+        <%  @apps.each do |app| %>
+        <% if app.id <= 4 %>
 <div class="product">
 <div class="cover slide">
 <img class="banner" src=<%= app.banner_url %>>
@@ -21,4 +30,62 @@
 </div><!-- /details slide -->
 </div>
 <% end %>
+<% end %>
 </div>
+
+
+ <div class="product-grid">
+        <%  @apps.each do |app| %>
+        <% if app.id > 4 and app.id <= 8%>
+<div class="product">
+<div class="cover slide">
+<img class="banner" src=<%= app.banner_url %>>
+<h3 class="title"><%= app.app_name %></h3>
+<p class="meta"><%= app.user_count %> user</p>
+</div>
+ <div class="details slide">
+   <div class="header">
+      <img class="icon" src= <%= app.icon_url %> >
+      <p class="title"><%= app.app_name %></p>
+    </div>
+    <div class="content">
+      <p class="description"><%= app.description %></p>
+</div>
+<div class="actions">
+<button class="install" onclick=<%= "window.location.assign('#{app.download_link}')" %>><span class="entypo-plus"></span>Free</button>
+ <button class="entypo-share share"><%= link_to "Share", apps_show_path(:id => app.id) %> </button>
+</div>
+</div><!-- /details slide -->
+</div>
+<% end %>
+<% end %>
+</div>
+ <div class="product-grid">
+        <%  @apps.each do |app| %>
+        <% if app.id > 8 %>
+<div class="product">
+<div class="cover slide">
+<img class="banner" src=<%= app.banner_url %>>
+<h3 class="title"><%= app.app_name %></h3>
+<p class="meta"><%= app.user_count %> user</p>
+</div>
+ <div class="details slide">
+   <div class="header">
+      <img class="icon" src= <%= app.icon_url %> >
+      <p class="title"><%= app.app_name %></p>
+    </div>
+    <div class="content">
+      <p class="description"><%= app.description %></p>
+</div>
+<div class="actions">
+<button class="install" onclick=<%= "window.location.assign('#{app.download_link}')" %>><span class="entypo-plus"></span>Free</button>
+ <button class="entypo-share share"><%= link_to "Share", apps_show_path(:id => app.id) %> </button>
+</div>
+</div><!-- /details slide -->
+</div>
+<% end %>
+<% end %>
+</div>
+</div>
+</body>
+</html>

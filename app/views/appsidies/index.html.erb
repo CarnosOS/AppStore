@@ -1,0 +1,13 @@
+<h1>Appsidies</h1>
+<table>
+    <thead>
+        <th>Name:</th>
+    </thead>
+    <tbody>
+        <%= @appsidies.each do |appsidy| %>
+        <tr>
+        <td><%= appsidy.appsidy_name %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

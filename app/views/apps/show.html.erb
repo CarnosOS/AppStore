@@ -2,6 +2,20 @@
 <div class="app-profile">
     <span class="app-title"><h1><%= @app.app_name %></h1></span>
      <span class="app-description"><h2><%= @app.description %></h2></span>
+     <img src="<%= @app.banner_url %>"></span>
+     <h1>Appsidies</h1>
+<table>
+    <thead>
+        <th>Name:</th>
+    </thead>
+    <tbody>
+        <%= @appsidies.each do |appsidy| %>
+        <tr>
+        <td><%= appsidy.name %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
      <%= link_to "Delete",apps_delete_path(:id => @app.id) %>
 <%= link_to "Edit",edit_app_path(@app) %>
 <%= link_to "Back",apps_path %>

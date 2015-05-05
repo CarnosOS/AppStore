@@ -1,3 +1,3 @@
 class App < ActiveRecord::Base
-     belongs_to :platform
+     has_many :appsidies
 end

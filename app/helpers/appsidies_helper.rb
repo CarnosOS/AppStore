@@ -1,0 +1,2 @@
+module AppsidiesHelper
+end

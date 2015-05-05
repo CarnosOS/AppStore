@@ -7,6 +7,7 @@ class CreateApps < ActiveRecord::Migration
       t.string  :icon_url
       t.text :description
       t.string  :download_link
+      t.references  :appsidies
       t.timestamps
     end
   end
