@@ -1,0 +1,9 @@
+{
+  "name":"AppStore",
+  "description":"The ArcherSs Os Appstore",
+  "scripts":{
+    "postdeploy":"bin/rails server"
+  },
+  "env":{},
+  "addons":[]
+}
